@@ -11,7 +11,6 @@ public class Constant implements Function {
 	
 	public double apply(double number) {
 		return constant;
-		
 	}
 
 	public Function derivative() {
@@ -19,7 +18,7 @@ public class Constant implements Function {
 	}
 	
 	public String toSting() {
-		return ""+0;
+		return ""+this.constant;
 	}
 
 }
