@@ -2,7 +2,6 @@ package ss.week4;
 
 public class Constant implements Function {
 
-
 	private double constant;
 	
 	public Constant(double constant) {
@@ -10,7 +9,7 @@ public class Constant implements Function {
 	}
 	
 	public double apply(double number) {
-		return constant;
+		return this.constant;
 	}
 
 	public Function derivative() {

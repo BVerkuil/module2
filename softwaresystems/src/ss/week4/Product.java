@@ -1,21 +1,25 @@
 package ss.week4;
 
 public class Product implements Function {
-
-	private double func1;
-	private double func2;
 	
-	public Product(double func1, double func2) {
-		this.func1 = func1;
-		this.func2 = func2;
+	protected Function g;
+	protected Function h;
+	
+	public Product(Function g, Function h) {
+		this.g = g;
+		this.h = h;
 	}
 	
 	public double apply(double number) {
-		return func1 * func2;
+		return g.apply(number) * h.apply(number);
 	}
 
 	public Function derivative() {
-		return new Product(0, 0);
+		return new Sum(new Product(g.derivative(), h) , new Product (h.derivative(), g));
+	}
+	
+	public String toString() {
+		return g.toString() + h.toString();
 	}
 
 }
