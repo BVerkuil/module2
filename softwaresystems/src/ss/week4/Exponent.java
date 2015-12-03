@@ -13,7 +13,7 @@ public class Exponent implements Function{
 	}
 
 	public Function derivative() {
-		return new LinearProduct(  , exponent))
+		return new LinearProduct(new Exponent(exponent - 1), new Constant(exponent));
 	}
 
 }

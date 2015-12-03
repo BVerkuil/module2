@@ -1,6 +1,6 @@
 package ss.week4;
 
-public class Constant implements Function {
+public class Constant implements Function, Integrandable {
 
 	private double constant;
 	
@@ -19,5 +19,11 @@ public class Constant implements Function {
 	public String toSting() {
 		return ""+this.constant;
 	}
+
+	public Function integrand() {
+		return 
+	}
+	
+	
 
 }
