@@ -1,6 +1,6 @@
 package ss.week4;
 
-public class Exponent implements Function{
+public class Exponent implements Function, Integrandable{
 	
 	private int exponent;
 	
@@ -14,6 +14,11 @@ public class Exponent implements Function{
 
 	public Function derivative() {
 		return new LinearProduct(new Exponent(exponent - 1), new Constant(exponent));
+	}
+
+	@Override
+	public Function integrand() {
+		asdreturn new LinearProduct(new Exponent(exponent - 1), new Constant(exponent));
 	}
 
 }

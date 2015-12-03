@@ -21,9 +21,8 @@ public class Constant implements Function, Integrandable {
 	}
 
 	public Function integrand() {
-		return 
+		return new LinearProduct(new Exponent(1), new Constant(constant));
 	}
-	
 	
 
 }

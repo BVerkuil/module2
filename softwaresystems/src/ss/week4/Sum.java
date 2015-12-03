@@ -1,6 +1,6 @@
 package ss.week4;
 
-public class Sum implements Function {
+public class Sum implements Function, Integrandable {
 
 	private Function g;
 	private Function h;
@@ -21,5 +21,12 @@ public class Sum implements Function {
 	public String toSting() {
 		return g.toString() + h.toString();
 	}
-
+	
+	public Function integrand() {
+		if (g instanceof Integrandable && h instanceof Integrandable) {
+			return new Sum(((Integrandable) g).integrand(), (Integrandable) h).integrand();
+		}else{
+			return null;
+		}	
+	}
 }
