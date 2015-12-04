@@ -18,7 +18,7 @@ public class Exponent implements Function, Integrandable{
 
 	@Override
 	public Function integrand() {
-		asdreturn new LinearProduct(new Exponent(exponent - 1), new Constant(exponent));
+		return new LinearProduct(new Exponent(exponent + 1), new Constant(exponent));
 	}
 
 }
