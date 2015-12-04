@@ -2,7 +2,7 @@ package ss.week4.test;
 
 import org.junit.Before;
 import org.junit.Test;
-import ss.week4.Constant;
+import ss.week4.math.Constant;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
