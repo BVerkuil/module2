@@ -16,7 +16,7 @@ public class Constant implements Function, Integrandable {
 		return new Constant(0);
 	}
 	
-	public String toSting() {
+	public String toString() {
 		return ""+this.constant;
 	}
 

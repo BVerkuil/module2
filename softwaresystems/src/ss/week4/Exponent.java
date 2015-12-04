@@ -16,9 +16,14 @@ public class Exponent implements Function, Integrandable{
 		return new LinearProduct(new Exponent(exponent - 1), new Constant(exponent));
 	}
 
-	@Override
 	public Function integrand() {
-		asdreturn new LinearProduct(new Exponent(exponent - 1), new Constant(exponent));
+		return  new LinearProduct(new Exponent(exponent + 1), new Constant(1/(exponent+1)));
 	}
+	
+	public String toString() {
+		return ("x^" + this.exponent);
+	}
+	
+	
 
 }

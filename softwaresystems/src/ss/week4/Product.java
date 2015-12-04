@@ -19,7 +19,7 @@ public class Product implements Function {
 	}
 	
 	public String toString() {
-		return g.toString() + h.toString();
+		return "" + this.g + "*" + this.h;
 	}
 
 }
