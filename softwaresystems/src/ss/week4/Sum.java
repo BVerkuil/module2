@@ -18,8 +18,8 @@ public class Sum implements Function, Integrandable {
 		return new Sum(g.derivative(), h.derivative());
 	}
 	
-	public String toSting() {
-		return g.toString() + h.toString();
+	public String toString() {
+		return g.toString() + "+" + h.toString();
 	}
 	
 	public Function integrand() {
