@@ -10,7 +10,7 @@ public class LinearProduct extends Product implements Integrandable {
 	}
 
 	public Function integrand() {
-		if (g instanceof Integrandable && h instanceof Integrandable) {
+		if (g instanceof Integrandable) {
 			return new LinearProduct(((Integrandable) g).integrand(), ((Constant) h));
 		}else{
 			return null;

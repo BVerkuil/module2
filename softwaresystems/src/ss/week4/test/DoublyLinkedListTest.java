@@ -36,7 +36,7 @@ public class DoublyLinkedListTest {
     }
 
     @Test
-    public void testRemoveHead() {
+   public void testRemoveHead() {
         list.add(0, object1);
         list.add(1, object2);
         list.add(2, object3);
