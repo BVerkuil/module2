@@ -1,5 +1,7 @@
 package ss.week4;
 
+import ss.week4.DoublyLinkedList.Node;
+
 public class LinkedList<Element> {
 
     private /*@ spec_public @*/ int size;
@@ -26,11 +28,28 @@ public class LinkedList<Element> {
 
     //@ ensures this.size == \old(size) - 1;
     public void remove(Element element) {
-        // TODO: implement, see exercise P-4.18
+    	  int i = 0;
+          while (i < this.size() && !this.get(i).equals(element))
+          	i = i +  1;    
+          if (size == 1) {
+        	  first = null;
+          } else if (i == 0) {
+        	  first = first.next;
+          }else {
+        	  Node p = findBefore(element);
+        	  p.next = p.next.next;
+          }
+          size = size - 1;    		  
     }
 
     public Node findBefore(Element element) {
-        // TODO: implement, see exercise P-4.18
+        int i = 0;
+        while (i < this.size() && !this.get(i).equals(element))
+        	i = i +  1;
+        if (i == 0)
+        	return null;
+        else
+        	return getNode(i-1);
     }
 
     //@ requires 0 <= index && index < this.size();

@@ -17,7 +17,7 @@ public class Exponent implements Function, Integrandable{
 	}
 
 	public Function integrand() {
-		return  new LinearProduct(new Exponent(exponent + 1), new Constant(1/(exponent+1)));
+		return  new LinearProduct(new Exponent(exponent + 1), new Constant(1/(exponent+1.0)));
 	}
 	
 	public String toString() {

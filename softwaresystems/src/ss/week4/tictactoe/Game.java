@@ -118,7 +118,16 @@ public class Game {
      * the changed game situation is printed.
      */
     private void play() {
-        // TODO: implement, see P-4.20
+        update();
+        while(!board.hasWinner()) {
+        	players[0].makeMove(board);
+        	update();
+        	if(!board.hasWinner()) {
+        		players[1].makeMove(board);
+        		update();
+        	} 	
+        }
+        printResult();
     }
 
     /**
